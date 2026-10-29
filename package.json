@@ -1,0 +1,23 @@
+{
+  "name": "@requestbeam/nodejs-sdk",
+  "version": "0.1.0",
+  "description": "RequestBeam Node.js SDK with TypeScript declarations and 12-language documentation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
+  "files": ["dist", "docs", "README.md", "LICENSE", "examples"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test test/*.test.cjs",
+    "prepare": "npm run build"
+  },
+  "repository": { "type": "git", "url": "git+ssh://git@github.com/RequestBeamDev/nodejs_sdk.git" },
+  "homepage": "https://github.com/RequestBeamDev/nodejs_sdk#readme",
+  "bugs": "https://github.com/RequestBeamDev/nodejs_sdk/issues",
+  "author": "RequestBeam <dev@requestbeam.com>",
+  "license": "MIT",
+  "dependencies": { "lossless-json": "^4.3.3" },
+  "devDependencies": { "@types/node": "^20.19.0", "typescript": "^5.9.3" }
+}
